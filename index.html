@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="cult.png" type="image/x-icon">
+    <title translate="no">ᵃᶜᵒ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body translate="no">
+
+
+<!--content-->
+<div>
+
+    <h2>Social Media</h2>
+      <li><a href="https://www.instagram.com/aco16550" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      <li><a href="https://www.discordapp.com/users/1265283552665276447" target="_blank" rel="noopener noreferrer">Discord</a></li>
+      
+    <h2>Aud Platform</h2>
+      <li><a href="https://www.a.com" target="_blank" rel="noopener noreferrer">Spotify</a></li>
+      <li><a href="https://www.a.com" target="_blank" rel="noopener noreferrer">Apple</a></li>
+      <li><a href="https://music.youtube.com/channel/UC44daQEpR1bXB97SQkaWhug?si=kOEjvaGdhhHPZmds" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+      <li><a href="https://soundcloud.com/aco-s" target="_blank" rel="noopener noreferrer">SoundCloud</a></li>
+          <!--visit counter-->
+          <div style="display: flex"> <a><img src='https://megacontador.com.br/img-JNDJNz58DvqmzJ5b-37.gif'></a> </div>
+          
+</div>
+
+
+
+<!--memory link-->
+<script> 
+        const link = document.getElementById('meuLink');
+        const sixHours = 6 * 60 * 60 * 1000;
+        const lastClickDate = localStorage.getItem('dataClique');
+    if (lastClickDate)  {
+        const currentDate = new Date().getTime();
+        const timeSinceLastClick = currentDate - parseInt(lastClickDate);
+    if (timeSinceLastClick > sixHours) {
+        localStorage.removeItem('dataClique');
+        link.classList.remove('reset')}
+    else {link.classList.add('reset')}}
+      link.addEventListener('click', () => {
+          localStorage.setItem('dataClique', new Date().getTime());
+          link.classList.add('reset')
+          })
+</script>
+
+</body>
+</html>
